@@ -40,6 +40,8 @@
 		FA3EDCFF2BE9A45F0047EE14 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EDCFE2BE9A45F0047EE14 /* CoreDataManager.swift */; };
 		FA3EDD022BE9B0AE0047EE14 /* NewConversationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EDD012BE9B0AE0047EE14 /* NewConversationController.swift */; };
 		FA3EDD042BE9B0EC0047EE14 /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EDD032BE9B0EC0047EE14 /* ChatController.swift */; };
+		FA7CE4922BF263CF00C0291A /* LanguageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE4912BF263CF00C0291A /* LanguageController.swift */; };
+		FA7CE4942BF265D800C0291A /* TermsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7CE4932BF265D800C0291A /* TermsController.swift */; };
 		FA8B085C2BEAB8B700764700 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8B085B2BEAB8B600764700 /* ProfileController.swift */; };
 		FA8B085F2BEADFD400764700 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = FA8B085E2BEADFD400764700 /* MessageKit */; };
 		FA8B08622BEB0DA900764700 /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FA8B08612BEB0DA900764700 /* JGProgressHUD */; };
@@ -115,6 +117,8 @@
 		FA3EDCFE2BE9A45F0047EE14 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		FA3EDD012BE9B0AE0047EE14 /* NewConversationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewConversationController.swift; sourceTree = "<group>"; };
 		FA3EDD032BE9B0EC0047EE14 /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		FA7CE4912BF263CF00C0291A /* LanguageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageController.swift; sourceTree = "<group>"; };
+		FA7CE4932BF265D800C0291A /* TermsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsController.swift; sourceTree = "<group>"; };
 		FA8B085B2BEAB8B600764700 /* ProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		FA9535572BE7DBB8002A13EB /* SearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
 		FA9535592BE7FC4E002A13EB /* YoutubeSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YoutubeSearchResponse.swift; sourceTree = "<group>"; };
@@ -312,6 +316,8 @@
 				FA3EDD012BE9B0AE0047EE14 /* NewConversationController.swift */,
 				FA3EDD032BE9B0EC0047EE14 /* ChatController.swift */,
 				FA8B085B2BEAB8B600764700 /* ProfileController.swift */,
+				FA7CE4912BF263CF00C0291A /* LanguageController.swift */,
+				FA7CE4932BF265D800C0291A /* TermsController.swift */,
 			);
 			path = General;
 			sourceTree = "<group>";
@@ -483,10 +489,12 @@
 				FA08A0192BE3EFC400CC1EEF /* UpcomingController.swift in Sources */,
 				FA26E6EB2BE6474200924709 /* HeroHeaderView.swift in Sources */,
 				FA3EDCFC2BE9A2ED0047EE14 /* TitleItem+CoreDataClass.swift in Sources */,
+				FA7CE4942BF265D800C0291A /* TermsController.swift in Sources */,
 				FA2106E52BDFE56A00A7F070 /* SceneDelegate.swift in Sources */,
 				FA2107042BDFEBC100A7F070 /* AuthHeaderView.swift in Sources */,
 				FA26E6FC2BE7418B00924709 /* TitleTableViewCell.swift in Sources */,
 				FA2107092BDFF60600A7F070 /* CustomTextField.swift in Sources */,
+				FA7CE4922BF263CF00C0291A /* LanguageController.swift in Sources */,
 				FAD2ADA12BE48D35002383DE /* User.swift in Sources */,
 				FA26E6FE2BE7463200924709 /* TitleViewModel.swift in Sources */,
 				FA3EDD022BE9B0AE0047EE14 /* NewConversationController.swift in Sources */,

@@ -25,6 +25,7 @@ struct Sender: SenderType {
 
 final class ChatController: MessagesViewController {
     
+    
     //MARK: - Variables
     private var messages: [Message] = []
     let dataBaseManger = DataBaseManager.shared
@@ -40,8 +41,8 @@ final class ChatController: MessagesViewController {
         super.viewDidLoad()
         self.setupMessagesCollectionView()
         
-        // search if chatID == nil or not ///gznDfsRqdCMzFtTSZ1TaAJqpQ5u2 cardi
-        ////////////////////  LTV9HpU1BXgYgjTE7RJo7XgUPOY2 gazy
+        // search if chatID == nil or not
+        
         if chatID == nil {
             dataBaseManger.getConvoId(otherId: otherId ?? "") { [weak self] chatId in
                     
@@ -106,7 +107,7 @@ extension ChatController: InputBarAccessoryViewDelegate {
     
     //MARK: - Send messages
     func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
-
+        
         let msg = Message(sender: selfSender, messageId: "", sentDate: Date(), kind: .text(text))
         messages.append(msg)
         
@@ -128,7 +129,7 @@ extension ChatController: InputBarAccessoryViewDelegate {
         messagesCollectionView.messagesDataSource = self
         messagesCollectionView.messagesLayoutDelegate = self
         messagesCollectionView.messagesDisplayDelegate = self
-        messagesCollectionView.messageCellDelegate = self
+        // messagesCollectionView.messageCellDelegate = self
         messageInputBar.delegate = self
         messageInputBar.inputTextView.dataDetectorTypes = .link
         messageInputBar.inputTextView.dataDetectorTypes = .phoneNumber
@@ -139,61 +140,62 @@ extension ChatController: InputBarAccessoryViewDelegate {
         messageInputBar.inputTextView.placeholder = "Enter message"
         messageInputBar.isTranslucent = true
         showMessageTimestampOnSwipeLeft = true
+        messageInputBar.inputTextView.isScrollEnabled = true
     }
 }
-
-extension ChatController: MessageCellDelegate{
     
-    func didTapBackground(in cell: MessageKit.MessageCollectionViewCell) {
-        //
-    }
-    
-    func didTapMessage(in cell: MessageKit.MessageCollectionViewCell) {
-        //
-    }
-    
-    func didTapAvatar(in cell: MessageKit.MessageCollectionViewCell) {
-        print("Avatar Tapped")
-    }
-    
-    func didTapCellTopLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        //
-    }
-    
-    func didTapCellBottomLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        //
-    }
-    
-    func didTapMessageTopLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        //
-    }
-    
-    func didTapMessageBottomLabel(in cell: MessageKit.MessageCollectionViewCell) {
-        print("didTapMessageBottomLabel Tapped")
-    }
-    
-    func didTapAccessoryView(in cell: MessageKit.MessageCollectionViewCell) {
-        //
-    }
-    
-    func didTapImage(in cell: MessageKit.MessageCollectionViewCell) {
-        //
-    }
-    
-    func didTapPlayButton(in cell: MessageKit.AudioMessageCell) {
-        //
-    }
-    
-    func didStartAudio(in cell: MessageKit.AudioMessageCell) {
-        //
-    }
-    
-    func didPauseAudio(in cell: MessageKit.AudioMessageCell) {
-        //
-    }
-    
-    func didStopAudio(in cell: MessageKit.AudioMessageCell) {
-        //
-    }
-}
-
+//    extension ChatController: MessageCellDelegate {
+//        
+//        func didTapBackground(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapMessage(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapAvatar(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapCellTopLabel(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapCellBottomLabel(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapMessageTopLabel(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapMessageBottomLabel(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapAccessoryView(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapImage(in cell: MessageKit.MessageCollectionViewCell) {
+//            //
+//        }
+//        
+//        func didTapPlayButton(in cell: MessageKit.AudioMessageCell) {
+//            //
+//        }
+//        
+//        func didStartAudio(in cell: MessageKit.AudioMessageCell) {
+//            //
+//        }
+//        
+//        func didPauseAudio(in cell: MessageKit.AudioMessageCell) {
+//            //
+//        }
+//        
+//        func didStopAudio(in cell: MessageKit.AudioMessageCell) {
+//            //
+//        }
+//    }
+//}
